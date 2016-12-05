@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acr.UserDialogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,16 @@ namespace XamarinFormsLoading
             InitializeComponent();
         }
 
-        private void IncrementButton_Clicked(object sender, EventArgs e)
+        private async void IncrementButton_Clicked(object sender, EventArgs e)
         {
-            m_count++;
-            CountLabel.Text = "COUNT = " + m_count;
+            using (UserDialogs.Instance.Loading("doing..."))
+            {
+                await Task.Delay(1000);
+                m_count++;
+                CountLabel.Text = "COUNT = " + m_count;
+                await Task.Delay(1000);
+            }
         }
+
     }
 }
