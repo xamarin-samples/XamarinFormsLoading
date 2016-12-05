@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinFormsLoading"
              x:Class="XamarinFormsLoading.MainPage">
-
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+  <StackLayout Orientation="Vertical" VerticalOptions="Center">
+    <Label Text="Loading Sample" HorizontalOptions="Center" />
+    <Button x:Name="IncrementButton" Text="Increment" Clicked="IncrementButton_Clicked"/>
+    <Label x:Name="CountLabel" Text="COUNT = 0" HorizontalOptions="Center" />
+  </StackLayout>
 </ContentPage>

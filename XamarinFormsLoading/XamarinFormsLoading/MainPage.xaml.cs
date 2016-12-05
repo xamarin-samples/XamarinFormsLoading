@@ -9,9 +9,17 @@ namespace XamarinFormsLoading
 {
     public partial class MainPage : ContentPage
     {
+        private int m_count = 0;
+
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void IncrementButton_Clicked(object sender, EventArgs e)
+        {
+            m_count++;
+            CountLabel.Text = "COUNT = " + m_count;
         }
     }
 }
