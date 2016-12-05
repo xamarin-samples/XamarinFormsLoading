@@ -20,6 +20,7 @@ namespace XamarinFormsLoading.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            Acr.UserDialogs.UserDialogs.Init(this);
             LoadApplication(new App());
         }
     }
